@@ -34,7 +34,7 @@ body {
   box-shadow: 0.5rem 0.5rem 0 rgb(var(--black));
 }
 
-.blog-card img {
+.blog-card > img {
   border-radius: 0.625rem;
 }
 
@@ -52,21 +52,23 @@ body {
 }
 
 .title {
-  border-radius: 0.625rem;
-  color: inherit;
   font-size: clamp(1.25rem, 5vw, 1.5rem);
   font-weight: 800;
+}
+
+.title a {
+  border-radius: 0.25rem;
   text-decoration: none;
   cursor: pointer;
   transition: color ease-in-out 0.25s;
 }
 
-.title:hover {
+.title a:hover {
   color: rgb(var(--yellow));
 }
 
-.title:focus {
-  outline: 1px solid rgb(var(--yellow));
+.title a:focus {
+  outline: 2px solid rgb(var(--yellow));
   outline-offset: 2px;
 }
 
@@ -79,12 +81,11 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-}
-
-.author img {
-  max-width: 2rem;
-}
-
-.author p {
   font-weight: 800;
+}
+
+.author > img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
 }
