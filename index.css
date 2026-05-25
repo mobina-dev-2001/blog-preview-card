@@ -1,0 +1,90 @@
+:root {
+  --yellow: 244, 208, 78;
+
+  --white: 255, 255, 255;
+  --black: 0, 0, 0;
+
+  --gray-950: 17, 17, 17;
+  --gray-500: 107, 107, 107;
+}
+
+::selection {
+  background-color: rgba(var(--yellow), 0.5);
+}
+
+body {
+  display: grid;
+  place-content: center;
+  padding: 1.5rem;
+  background-color: rgb(var(--yellow));
+  color: rgb(var(--gray-950));
+  font-family: "Figtree", sans-serif;
+  font-size: clamp(0.75rem, 4vw, 0.875rem);
+  font-weight: 500;
+}
+
+.blog-card {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 24rem;
+  padding: 1.5rem;
+  background-color: rgb(var(--white));
+  border: 1px solid rgb(var(--gray-950));
+  border-radius: 1.25rem;
+  box-shadow: 0.5rem 0.5rem 0 rgb(var(--black));
+}
+
+.blog-card img {
+  border-radius: 0.625rem;
+}
+
+.content-container {
+  display: grid;
+  justify-items: start;
+  gap: 0.75rem;
+}
+
+.category {
+  padding: 0.25rem 0.75rem;
+  background-color: rgb(var(--yellow));
+  border-radius: 0.25rem;
+  font-weight: 800;
+}
+
+.title {
+  border-radius: 0.625rem;
+  color: inherit;
+  font-size: clamp(1.25rem, 5vw, 1.5rem);
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color ease-in-out 0.25s;
+}
+
+.title:hover {
+  color: rgb(var(--yellow));
+}
+
+.title:focus {
+  outline: 1px solid rgb(var(--yellow));
+  outline-offset: 2px;
+}
+
+.description {
+  color: rgb(var(--gray-500));
+  font-size: clamp(0.875rem, 4.5vw, 1rem);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author img {
+  max-width: 2rem;
+}
+
+.author p {
+  font-weight: 800;
+}
